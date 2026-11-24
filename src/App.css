@@ -182,3 +182,17 @@
     border-right-color: var(--border);
   }
 }
+.skills-content {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+
+.skills-card {
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+}
