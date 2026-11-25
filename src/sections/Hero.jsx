@@ -1,5 +1,6 @@
-import profileImg from '../assets/My Profile.jpeg'
+
 import { ArrowDown, Sparkles } from 'lucide-react'
+import profileImg from '../assets/My Profile.jpeg'
 import './Hero.css'
 
 function Hero() {
@@ -11,25 +12,26 @@ function Hero() {
 
           <div className="hero-badge">
             <Sparkles size={16} />
-            <span>Welcome to my Portfolio</span>
+            <span>Always Learning</span>
           </div>
 
-          <h1>
-            Hello, I'm <br />
-            <span>Vijayashree</span>
+          <h1 className="hero-title">
+            Hello, I'm <span className="highlight">Vijayashree R</span>
           </h1>
+          <h2 className="hero-subtitle">
+            Aspiring Software Developer
+          </h2>
 
-          <h2>Aspiring Software Developer</h2>
-
-          <p>
-            Passionate about programming and software development.
-            I enjoy solving problems, learning new technologies,
-            and building meaningful projects that make a difference.
+          <p className="hero-description">
+            Passionate about programming, problem-solving and building
+            meaningful applications. I enjoy learning new technologies
+            and turning ideas into practical solutions.
           </p>
 
           <div className="hero-buttons">
             <a href="#projects" className="btn-primary">
               Explore My Work
+              <ArrowDown size={18} />
             </a>
 
             <a href="#contact" className="btn-secondary">
@@ -37,31 +39,50 @@ function Hero() {
             </a>
           </div>
 
+          {/* Social Media Links */}
           <div className="hero-socials">
+
+            {/* GitHub */}
             <a
-              href="https://github.com/"
+              href="https://github.com/VIJAYASHREE-R-SPARK"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="GitHub"
             >
-              GitHub
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.82 1.1.82 2.22v3.3c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+              </svg>
+
+              <span>GitHub</span>
             </a>
 
+            {/* LinkedIn */}
             <a
-              href="YOUR_LINKEDIN_PROFILE_URL"
+              href="https://www.linkedin.com/in/vijayashree-r-396540398/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <span className="linkedin-mark">in</span>
+              <span>LinkedIn</span>
             </a>
+
           </div>
 
         </div>
 
         <div className="hero-image-container">
-
           <img
             src={profileImg}
-            alt="Vijayashree Profile"
+            alt="Vijayashree profile"
             className="profile-img"
           />
 
@@ -69,15 +90,9 @@ function Hero() {
             <Sparkles size={18} />
             <span>Always Learning</span>
           </div>
-
         </div>
 
       </div>
-
-      <a href="#about" className="scroll-down">
-        <ArrowDown />
-      </a>
-
     </section>
   )
 }
